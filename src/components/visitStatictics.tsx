@@ -61,7 +61,7 @@ const VisitsStatistics: FC = () => {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-4xl font-bold">Estadísticas de Visitas</h2>
+          <h2 className="text-4xl font-bold text-gray-600">Estadísticas de Visitas</h2>
           <div className="flex gap-2">
             <button
               onClick={() => setViewMode('table')}
