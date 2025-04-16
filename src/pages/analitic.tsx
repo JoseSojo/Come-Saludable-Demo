@@ -40,7 +40,7 @@ const Analitic: FC<Props> = () => {
             <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold">Analíticas</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">Analíticas</h1>
                         <p className="text-gray-600">Sección de análisis, y estadísticas.</p>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
-import Image from '../../assets/hero.webp';
 import { FC } from 'react';
 import { Restaurant } from '../../types/types';
 import { Star } from 'lucide-react';
+import { Link } from 'wouter';
 
 interface Props {
   restaurant: Restaurant;
@@ -12,7 +12,7 @@ const RestaurantCard: FC<Props> = ({ restaurant }) => {
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <img
         className="w-full h-48 object-cover"
-        src={Image}
+        src={restaurant.image}
         alt={restaurant.name}
       />
       <div className="p-6">
@@ -24,8 +24,11 @@ const RestaurantCard: FC<Props> = ({ restaurant }) => {
           </div>
         </div>
         <p className="mt-2 text-gray-600">{restaurant.description}</p>
-        <div className="mt-4 flex justify-between items-center">
-          <span className="text-sm text-gray-500">{restaurant.location}</span>
+        <p className="text-sm text-gray-500 mt-2">{restaurant.location}</p>
+        <div className="mt-2 flex justify-between items-center">
+          <Link className={`bg-green-600 hover:bg-green-700 px-4 text-sm py-1 rounded-2xl text-white`} href={`/restaurant/${restaurant.id}`}>
+            ver más
+          </Link>
           <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
             {restaurant.cuisine}
           </span>

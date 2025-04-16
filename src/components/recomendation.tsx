@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FC } from "react"
-import Image from '../assets/hero.webp';
+import Image from '../assets/faces/4.jpg';
 
 interface Props { }
 

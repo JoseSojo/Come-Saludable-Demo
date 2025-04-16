@@ -1,25 +1,28 @@
 import { Quote, Star } from "lucide-react";
 import { FC } from "react"
+import Image1 from '../assets/faces/1.jpg';
+import Image2 from '../assets/faces/2.jpg';
+import Image3 from '../assets/faces/3.jpg';
 
 const testimonials = [
   {
     name: "María González",
     role: "Food Critic",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    image: Image1,
     content: "Una experiencia culinaria excepcional. Los sabores son auténticos y el servicio es impecable.",
     rating: 5
   },
   {
     name: "Carlos Rodríguez",
     role: "Chef Profesional",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    image: Image2,
     content: "La calidad de los ingredientes y la presentación de los platos es extraordinaria.",
     rating: 5
   },
   {
     name: "Ana Martínez",
     role: "Blogger Gastronómico",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    image: Image3,
     content: "Cada visita es una nueva aventura culinaria. ¡Altamente recomendado!",
     rating: 5
   }

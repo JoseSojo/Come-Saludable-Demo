@@ -34,16 +34,16 @@ const LayoutDashboard: FC<Props> = ({ children }) => {
       <main className="flex w-full">
         <div className="w-64 sticky top-0 h-screen bg-gray-50 flex flex-col py-3">
           <Link href="/dashboard" className={`w-full py-3 text-center duration-100 font-semibold ${location === `/dashboard` ? `bg-gray-200` : `hover:bg-gray-200`}`}>
-            Dashboard
+            <span className="text-gray-700">Dashboard</span>
           </Link>
           <Link href="/dashboard/menu" className={`w-full py-3 text-center duration-100 font-semibold ${location === `/dashboard/menu` ? `bg-gray-200` : `hover:bg-gray-200`}`}>
-            Menús
+           <span className="text-gray-700"> Menús</span>
           </Link>
           <Link href="/dashboard/analitic" className={`w-full py-3 text-center duration-100 font-semibold ${location === `/dashboard/analitic` ? `bg-gray-200` : `hover:bg-gray-200`}`}>
-            Análisis
+            <span className="text-gray-700">Análisis</span>
           </Link>
           <Link href="/dashboard/report" className={`w-full py-3 text-center duration-100 font-semibold ${location === `/dashboard/report` ? `bg-gray-200` : `hover:bg-gray-200`}`}>
-            Reportes
+            <span className="text-gray-700">Reportes</span>
           </Link>
 
         </div>

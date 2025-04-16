@@ -2,6 +2,7 @@ import { FC } from "react"
 import { motion } from 'framer-motion';
 import { useLocation } from "wouter";
 import HeroImage from "../assets/hero.webp";
+import HeroImage2 from "../assets/hero2.webp";
 import { ArrowRight, Leaf } from "lucide-react";
 
 interface Props {
@@ -91,7 +92,7 @@ const Hero: FC<Props> = ({
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src={HeroImage}
+          src={isRestaurantsPage ? HeroImage : HeroImage2}
           alt="Comida saludable"
         />
       </div>

@@ -13,7 +13,7 @@ const Menu: FC<Props> = () => {
             <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold">Menús</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">Menús</h1>
                         <p className="text-gray-600">administración de menús, crea nuevos, acutaliza, elimina.</p>
                     </div>
                 </div>

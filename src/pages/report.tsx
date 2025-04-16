@@ -12,7 +12,7 @@ const Report: FC<Props> = () => {
             <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold">Reportes</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">Reportes</h1>
                         <p className="text-gray-600">genera reportes pdf de acuerdo a tus necesidades.</p>
                     </div>
                 </div>

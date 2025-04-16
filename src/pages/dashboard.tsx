@@ -14,7 +14,7 @@ const Dashboard: FC<Props> = () => {
             <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold">Dashboard del Restaurante</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">Dashboard del Restaurante</h1>
                         <p className="text-gray-600">Bienvenido de nuevo. Aquí está el resumen de las visitas a tu sitio.</p>
                     </div>
                 </div>
