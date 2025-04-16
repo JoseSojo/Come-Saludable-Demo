@@ -78,7 +78,7 @@ const Recommendations: FC<Props> = () => {
           </motion.div>
 
           <div className="mt-12 lg:mt-0 ">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {recommendations.map((item, index) => (
                 <motion.div
                   key={index}
