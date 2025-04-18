@@ -33,7 +33,7 @@ const Recomendations: FC<Props> = () => {
                         <div>
                             <h3 className="font-semibold mb-3 flex items-center gap-2 text-gray-700">
                                 <Utensils className="w-4 h-4" />
-                                Tendencias
+                                Etiquetas
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {tending.map(ingredient => (
