@@ -6,6 +6,19 @@ export interface Restaurant {
   rating: number;
   location: string;
   cuisine: string;
+  position: [number, number],
+  address: string,
+  phone: string,
+  website: string,
+  hours: string,
+  coverImage: string,
+  metrics: {
+    monthlyVisits: number,
+    avgRating: number,
+    totalReviews: number,
+    responseRate: string
+  },
+  gallery: string[]
 }
 
 export interface Menu {

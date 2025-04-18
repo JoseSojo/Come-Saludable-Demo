@@ -10,49 +10,17 @@ import {
     Edit3,
     Plus
 } from 'lucide-react';
-import CoverImage from '../assets/image/7.webp'; 
+// import CoverImage from '../assets/image/7.webp';
+import UniqueMap from '../components/map/uniqueMap';
+import { restaurants } from '../data/restaurants';
 
-import Image1 from '../assets/image/1.webp'; 
-import Image2 from '../assets/image/2.webp'; 
-import Image3 from '../assets/image/3.webp'; 
-import Image4 from '../assets/image/4.webp'; 
-import Image5 from '../assets/image/5.webp'; 
-import Image6 from '../assets/image/6.webp'; 
-import Image8 from '../assets/image/8.webp'; 
-import Image10 from '../assets/image/10.webp'; 
+interface Props {
+    edit?: boolean
+}
 
+const restaurantData = restaurants[1]
 
-const restaurantData = {
-    name: "La Casa del Sabor",
-    rating: 4.8,
-    cuisine: "Mediterránea",
-    priceRange: "€€€",
-    address: "Calle Principal 123, Madrid",
-    phone: "+34 912 345 678",
-    website: "www.lacasadelsabor.es",
-    hours: "Lun-Dom: 12:00-23:00",
-    description: "Restaurante mediterráneo con más de 20 años de experiencia, especializado en paellas y mariscos frescos.",
-    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-    metrics: {
-        monthlyVisits: 12500,
-        avgRating: 4.8,
-        totalReviews: 450,
-        responseRate: "95%"
-    },
-    gallery: [
-        Image1,
-        Image2,
-        Image3,
-        Image4,
-        Image5,
-        Image6,
-        Image8,
-        // Image9,
-        Image10,
-    ]
-};
-
-const Profile: FC = () => {
+const ProfileComponent: FC<Props> = ({ edit }) => {
     const [selectedTab, setSelectedTab] = useState('general');
     const [isDragging, setIsDragging] = useState(false);
 
@@ -76,14 +44,14 @@ const Profile: FC = () => {
             {/* Cover Image */}
             <div className="relative h-64 bg-gray-300">
                 <img
-                    src={CoverImage}
+                    src={restaurantData.coverImage}
                     alt={restaurantData.name}
                     className="w-full h-full object-cover"
                 />
-                <button className="absolute bottom-4 right-4 btn bg-green-600 hover:bg0-green-700 text-white border-0">
+                {edit && <button className="absolute bottom-4 right-4 btn bg-green-600 hover:bg0-green-700 text-white border-0">
                     <Edit3 className="w-4 h-4 mr-2" />
                     Cambiar Portada
-                </button>
+                </button>}
             </div>
 
             {/* Profile Header */}
@@ -99,13 +67,11 @@ const Profile: FC = () => {
                                 </div>
                                 <span className="text-gray-600">•</span>
                                 <span className="text-gray-600">{restaurantData.cuisine}</span>
-                                <span className="text-gray-600">•</span>
-                                <span className="text-gray-600">{restaurantData.priceRange}</span>
                             </div>
                         </div>
-                        <div className="mt-4 md:mt-0">
+                        {edit && <div className="mt-4 md:mt-0">
                             <button className="px-4 py-2 rounded btn bg-green-600 hover:bg0-green-700 text-white border-0">Editar Perfil</button>
-                        </div>
+                        </div>}
                     </div>
 
                     {/* Quick Info */}
@@ -144,6 +110,12 @@ const Profile: FC = () => {
                         onClick={() => setSelectedTab('photos')}
                     >
                         <span className={`${selectedTab === `photos` ? `text-gray-900 font-semibold` : `text-gray-500`}`}>Fotos</span>
+                    </button>
+                    <button
+                        className={`text-black tab ${selectedTab === 'ubication' ? 'tab-active' : ''}`}
+                        onClick={() => setSelectedTab('ubication')}
+                    >
+                        <span className={`${selectedTab === `ubication` ? `text-gray-900 font-semibold` : `text-gray-500`}`}>Ubicación</span>
                     </button>
                 </div>
 
@@ -189,7 +161,7 @@ const Profile: FC = () => {
                     {selectedTab === 'photos' && (
                         <div className="space-y-6">
                             {/* Upload Section */}
-                            <div
+                            {edit && <div
                                 className={`border-2 border-dashed rounded-lg p-8 text-center ${isDragging ? 'border-primary bg-primary/5' : 'border-gray-300'
                                     }`}
                                 onDragOver={handleDragOver}
@@ -203,7 +175,7 @@ const Profile: FC = () => {
                                     <Plus className="w-4 h-4 mr-2" />
                                     Seleccionar Archivos
                                 </button>
-                            </div>
+                            </div>}
 
                             {/* Gallery Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -214,17 +186,24 @@ const Profile: FC = () => {
                                             alt={`Gallery ${index + 1}`}
                                             className="w-full h-48 object-cover rounded-lg"
                                         />
-                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center gap-2">
+                                        {edit && <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center gap-2">
                                             <button className="btn btn-circle btn-sm">
                                                 <Edit3 className="w-4 h-4" />
                                             </button>
                                             <button className="btn btn-circle btn-sm btn-error">
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
-                                        </div>
+                                        </div>}
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    )}
+
+                    {selectedTab === 'ubication' && (
+                        <div className="space-y-6">
+                            {/* Upload Section */}
+                            <UniqueMap restaurant={restaurantData} />
                         </div>
                     )}
                 </div>
@@ -233,4 +212,4 @@ const Profile: FC = () => {
     );
 }
 
-export default Profile;
+export default ProfileComponent;

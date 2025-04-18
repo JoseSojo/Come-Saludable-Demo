@@ -18,9 +18,9 @@ const AppRouter: FC = () => {
     <Switch>
       <Route path="/"><Layout><Home /></Layout></Route>
       <Route path="/restaurants"><Layout><Restaurants /></Layout></Route>
-      <Route path="/restaurant/:id"><Layout><RestaurantsDetails /></Layout></Route>
+      <Route path="/restaurant/:id"><><RestaurantsDetails /></></Route>
       <Route path="/dashboard"><LayoutDashboard><Dashboard /></LayoutDashboard></Route>
-      <Route path="/dashboard/analitic"><LayoutDashboard><Analitic /></LayoutDashboard></Route>
+      <Route path="/dashboard/analytics"><LayoutDashboard><Analitic /></LayoutDashboard></Route>
       <Route path="/dashboard/menu"><LayoutDashboard><Menu /></LayoutDashboard></Route>
       <Route path="/dashboard/report"><LayoutDashboard><Report /></LayoutDashboard></Route>
       <Route path="/dashboard/profile"><LayoutDashboard><Profile /></LayoutDashboard></Route>

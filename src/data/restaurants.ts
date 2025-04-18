@@ -5,6 +5,8 @@ import Image3 from '../assets/image/3.webp';
 import Image4 from '../assets/image/4.webp';
 import Image5 from '../assets/image/5.webp';
 import Image6 from '../assets/image/6.webp';
+import Image8 from '../assets/image/8.webp';
+import Image10 from '../assets/image/10.webp';
 
 export const restaurants: Restaurant[] = [
   {
@@ -14,7 +16,30 @@ export const restaurants: Restaurant[] = [
     image: Image1,
     rating: 4.8,
     location: 'Zona Gourmet',
-    cuisine: 'Orgánica'
+    cuisine: 'Orgánica',
+    position: [10.2355, -67.5987] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   },
   {
     id: '2',
@@ -23,7 +48,30 @@ export const restaurants: Restaurant[] = [
     image: Image2,
     rating: 4.6,
     location: 'Centro Ciudad',
-    cuisine: 'Mediterránea'
+    cuisine: 'Mediterránea',
+    position: [10.2469, -67.5958] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   },
   {
     id: '3',
@@ -32,7 +80,30 @@ export const restaurants: Restaurant[] = [
     image: Image3,
     rating: 4.7,
     location: 'Distrito Financiero',
-    cuisine: 'Fitness'
+    cuisine: 'Fitness',
+    position: [10.5068, -66.9146] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   },
   {
     id: '4',
@@ -41,7 +112,30 @@ export const restaurants: Restaurant[] = [
     image: Image4,
     rating: 4.5,
     location: 'Plaza Central',
-    cuisine: 'Bowl & Ensaladas'
+    cuisine: 'Bowl & Ensaladas',
+    position: [10.4806, -66.9036] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   },
   {
     id: '4',
@@ -50,7 +144,30 @@ export const restaurants: Restaurant[] = [
     image: Image5,
     rating: 4.5,
     location: 'Plaza Central',
-    cuisine: 'Bowl & Ensaladas'
+    cuisine: 'Bowl & Ensaladas',
+    position: [10.4236, -66.8516] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   },
   {
     id: '4',
@@ -59,7 +176,30 @@ export const restaurants: Restaurant[] = [
     image: Image6,
     rating: 4.5,
     location: 'Plaza Central',
-    cuisine: 'Bowl & Ensaladas'
+    cuisine: 'Bowl & Ensaladas',
+    position: [10.2469, -67.5958] as [number, number],
+    address: "Calle Principal 123, Madrid",
+    phone: "+34 912 345 678",
+    website: "www.lacasadelsabor.es",
+    hours: "Lun-Dom: 12:00-23:00",
+    coverImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    metrics: {
+      monthlyVisits: 12500,
+      avgRating: 4.8,
+      totalReviews: 450,
+      responseRate: "95%"
+    },
+    gallery: [
+      Image1,
+      Image2,
+      Image3,
+      Image4,
+      Image5,
+      Image6,
+      Image8,
+      // Image9,
+      Image10,
+    ]
   }
 ];
 

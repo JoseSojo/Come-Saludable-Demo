@@ -13,7 +13,7 @@ interface Props {
 const Hero: FC<Props> = ({
   title = "Come Saludable, Vive Mejor",
   description = "Descubre una nueva forma de alimentarte. Conectamos los mejores restaurantes saludables con personas que buscan un estilo de vida más equilibrado. Comida deliciosa, nutritiva y directa a tu mesa."
-}) => {
+}) => {   
   const [location, setLocation] = useLocation();
 
   const navigate = (path: string) => {

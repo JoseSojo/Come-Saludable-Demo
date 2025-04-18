@@ -2,6 +2,7 @@ import { useParams } from 'wouter';
 import { restaurants, menus } from '../data/restaurants';
 import MenuCard from '../components/card/menu';
 import Image from '../assets/hero.webp';
+import UniqueMap from '../components/map/uniqueMap';
 
 export default function RestaurantsDetails() {
   const { id } = useParams<{ id: string }>();
@@ -31,6 +32,10 @@ export default function RestaurantsDetails() {
               </span>
             </div>
           </div>
+        </div>
+
+        <div className='bg-white rounded-lg shadow-lg overflow-hidden mb-8 p-5'>
+          <UniqueMap restaurant={restaurant} />
         </div>
 
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Nuestros Menús</h2>
