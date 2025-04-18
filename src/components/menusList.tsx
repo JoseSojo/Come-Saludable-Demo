@@ -48,7 +48,7 @@ const MenuList: FC<Props> = ({ title }) => {
         <section className="py-24">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-8">
-                    <h2 className="text-4xl font-bold text-gray-600">{title ? title : `Menús Disponibles`}</h2>
+                    <h2 className="text-4xl font-bold text-gray-600">{title ? title : `Menús`}</h2>
                     <div className="flex gap-2">
                         <Link to="/create-restaurant" className="bg-green-600 hover:bg-green-700 duration-200 flex items-center justify-between rounded px-4 py-2 text-white font-bold">
                             <Plus className="w-4 h-4 mr-2" />

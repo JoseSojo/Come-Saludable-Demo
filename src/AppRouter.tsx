@@ -11,19 +11,26 @@ import Analitic from "./pages/analitic"
 import Report from "./pages/report"
 import Menu from "./pages/menu"
 import Profile from "./pages/profile"
+import { restaurants } from "./data/restaurants"
+import Search from "./pages/search"
+import Explorer from "./pages/explorer"
+import MenuFichaLink from "./components/ficha/menuFicha"
 
 const AppRouter: FC = () => {
 
   return (
     <Switch>
       <Route path="/"><Layout><Home /></Layout></Route>
+      <Route path="/search"><Layout><Search /></Layout></Route>
+      <Route path="/explorer"><Layout><Explorer /></Layout></Route>
       <Route path="/restaurants"><Layout><Restaurants /></Layout></Route>
-      <Route path="/restaurant/:id"><><RestaurantsDetails /></></Route>
+      <Route path="/restaurant/menu/:id"><Layout><MenuFichaLink /></Layout></Route>
+      <Route path="/restaurant/:id"><Layout><RestaurantsDetails /></Layout></Route>
       <Route path="/dashboard"><LayoutDashboard><Dashboard /></LayoutDashboard></Route>
       <Route path="/dashboard/analytics"><LayoutDashboard><Analitic /></LayoutDashboard></Route>
       <Route path="/dashboard/menu"><LayoutDashboard><Menu /></LayoutDashboard></Route>
       <Route path="/dashboard/report"><LayoutDashboard><Report /></LayoutDashboard></Route>
-      <Route path="/dashboard/profile"><LayoutDashboard><Profile edit /></LayoutDashboard></Route>
+      <Route path="/dashboard/profile"><LayoutDashboard><Profile edit restaurantData={restaurants[1]} /></LayoutDashboard></Route>
       <Route path="/login"><Login /></Route>
 
       {/* Default route in a switch */}

@@ -29,6 +29,11 @@ export interface Menu {
   price: number;
   image: string;
   calories: number;
+  category: string[],
+  preparationTime: string;
+  servings: number;
+  ingredients: string[];
+  allergens: string[]
 }
 
 export interface LoginFormData {

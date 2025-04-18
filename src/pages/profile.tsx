@@ -10,17 +10,17 @@ import {
     Edit3,
     Plus
 } from 'lucide-react';
-// import CoverImage from '../assets/image/7.webp';
 import UniqueMap from '../components/map/uniqueMap';
-import { restaurants } from '../data/restaurants';
+import { Restaurant } from '../types/types';
+import { menus } from '../data/restaurants';
+import MenuCard from '../components/card/menu';
 
 interface Props {
-    edit?: boolean
+    edit?: boolean,
+    restaurantData: Restaurant
 }
 
-const restaurantData = restaurants[1]
-
-const ProfileComponent: FC<Props> = ({ edit }) => {
+const ProfileComponent: FC<Props> = ({ edit, restaurantData }) => {
     const [selectedTab, setSelectedTab] = useState('general');
     const [isDragging, setIsDragging] = useState(false);
 
@@ -117,6 +117,12 @@ const ProfileComponent: FC<Props> = ({ edit }) => {
                     >
                         <span className={`${selectedTab === `ubication` ? `text-gray-900 font-semibold` : `text-gray-500`}`}>Ubicación</span>
                     </button>
+                    <button
+                        className={`text-black tab ${selectedTab === 'menu' ? 'tab-active' : ''}`}
+                        onClick={() => setSelectedTab('menu')}
+                    >
+                        <span className={`${selectedTab === `menu` ? `text-gray-900 font-semibold` : `text-gray-500`}`}>Menús</span>
+                    </button>
                 </div>
 
                 {/* Tab Content */}
@@ -204,6 +210,14 @@ const ProfileComponent: FC<Props> = ({ edit }) => {
                         <div className="space-y-6">
                             {/* Upload Section */}
                             <UniqueMap restaurant={restaurantData} />
+                        </div>
+                    )}
+
+                    {selectedTab === 'menu' && (
+                        <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+                            {
+                                menus.map(menu => <MenuCard menu={menu} />)
+                            }
                         </div>
                     )}
                 </div>

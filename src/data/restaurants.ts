@@ -211,7 +211,20 @@ export const menus: Menu[] = [
     description: 'Quinoa, aguacate, huevo pochado, espinacas y vinagreta de limón',
     price: 12.99,
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd',
-    calories: 450
+    calories: 450,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   },
   {
     id: '2',
@@ -220,7 +233,20 @@ export const menus: Menu[] = [
     description: 'Mix de lechugas, nueces, frutas de temporada y pollo a la parrilla',
     price: 11.99,
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c',
-    calories: 380
+    calories: 380,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   },
   {
     id: '3',
@@ -229,7 +255,20 @@ export const menus: Menu[] = [
     description: 'Pasta integral con verduras asadas y aceite de oliva virgen',
     price: 13.99,
     image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601',
-    calories: 520
+    calories: 520,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   },
   {
     id: '4',
@@ -238,7 +277,20 @@ export const menus: Menu[] = [
     description: 'Salmón fresco con quinoa y vegetales salteados',
     price: 15.99,
     image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288',
-    calories: 490
+    calories: 490,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   },
   {
     id: '5',
@@ -247,7 +299,20 @@ export const menus: Menu[] = [
     description: 'Pechuga de pollo a la plancha con batata y brócoli',
     price: 12.99,
     image: 'https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2',
-    calories: 420
+    calories: 420,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   },
   {
     id: '6',
@@ -256,6 +321,19 @@ export const menus: Menu[] = [
     description: 'Garbanzos, kale, tomates cherry y aderezo tahini',
     price: 11.99,
     image: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38',
-    calories: 380
+    calories: 380,
+    category: ["Platos Principales", "Familia"],
+    ingredients: [
+      "Arroz bomba",
+      "Camarones",
+      "Mejillones",
+      "Calamares",
+      "Azafrán",
+      "Pimiento rojo",
+      "Guisantes"
+    ],
+    allergens: ["Mariscos", "Moluscos"],
+    preparationTime: "30 min",
+    servings: 2,
   }
 ];
