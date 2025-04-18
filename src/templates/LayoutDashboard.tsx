@@ -1,4 +1,4 @@
-import { User2, LogOut, FileText, MenuIcon, BarChart } from "lucide-react"
+import { User2, LogOut, FileText, MenuIcon, BarChart, ArrowLeftCircle } from "lucide-react"
 import { FC, ReactNode } from "react"
 import { Link, useLocation } from "wouter"
 
@@ -16,6 +16,10 @@ const LayoutDashboard: FC<Props> = ({ children }) => {
     { id: 'menus', name: 'Menús', icon: MenuIcon, link: `/dashboard/menu/` },
     { id: 'analytics', name: 'Análisis', icon: BarChart, link: `/dashboard/analytics/` },
   ];
+
+  const handleGoBack = () => {
+    window.history.back(); // Equivalente a navigate(-1) en React Router
+  };
 
   return (
     <>
@@ -59,8 +63,13 @@ const LayoutDashboard: FC<Props> = ({ children }) => {
 
           <ul className="flex">
             <li className="h-full">
+              <button onClick={handleGoBack} className="group hover:bg-sky-400 duration-200 px-4 h-full py-4">
+                <ArrowLeftCircle className="text-sky-900  duration-100" />
+              </button>
+            </li>
+            <li className="h-full">
               <button className="group hover:bg-emerald-400 duration-200 px-4 h-full py-4">
-                <Link href="/dashboard/profile">
+                <Link href="/dashboard/restaurant">
                   <User2 className="text-emerald-900  duration-100" />
                 </Link>
               </button>

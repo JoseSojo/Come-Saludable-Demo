@@ -10,7 +10,7 @@ const MenuFichaComponent: FC<Props> = ({ menu }) => {
 
     const handleGoBack = () => {
         window.history.back(); // Equivalente a navigate(-1) en React Router
-      };
+    };
 
     return (
         <div className='w-full p-5'>
@@ -23,7 +23,7 @@ const MenuFichaComponent: FC<Props> = ({ menu }) => {
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 left-4">
-                        <button 
+                        <button
                             onClick={handleGoBack}
                             className="cursor-pointer bg-white px-3 py-1 rounded-full shadow-lg flex items-center gap-1"
                         >

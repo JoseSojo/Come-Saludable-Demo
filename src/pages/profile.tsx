@@ -216,7 +216,7 @@ const ProfileComponent: FC<Props> = ({ edit, restaurantData }) => {
                     {selectedTab === 'menu' && (
                         <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                             {
-                                menus.map(menu => <MenuCard menu={menu} />)
+                                menus.map(menu => <MenuCard  edit={edit} menu={menu} />)
                             }
                         </div>
                     )}

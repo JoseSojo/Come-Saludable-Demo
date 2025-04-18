@@ -4,9 +4,10 @@ import { Link } from "wouter";
 
 interface Props {
   menu: Menu;
+  edit?: boolean 
 }
 
-export default function MenuCard({ menu }: Props) {
+export default function MenuCard({ menu, edit }: Props) {
   return (
     <div className="bg-white rounded-lg shadow-lg flex flex-col justify-between overflow-hidden">
       <img
@@ -22,7 +23,7 @@ export default function MenuCard({ menu }: Props) {
           <span className="text-sm text-gray-500">{menu.calories} cal</span>
         </div>
         <div className="flex justify-end items-center">
-          <Link className={`btn btn-sm`} href={`/restaurant/menu/${menu.id}`}>ver</Link>
+          <Link className={`btn btn-sm`} href={edit ? `/dashboard/restaurant/menu/${menu.id}` : `/restaurant/menu/${menu.id}`}>ver</Link>
         </div>
       </div>
     </div>
