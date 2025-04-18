@@ -14,7 +14,7 @@ const Layout: FC<Props> = ({ children }) => {
     { id: 'Inicio', name: 'Inicio', icon: Home, link: `/` },
     { id: 'Restaurante', name: 'Restaurante', icon: Apple, link: `/restaurants/` },
     { id: 'Buscar', name: 'Buscar', icon: Search, link: `/search/` },
-    { id: 'Explorar', name: 'Explorar', icon: Map, link: `/explorer/` },
+    { id: 'recomendados', name: 'recomendados', icon: Map, link: `/recomendations/` },
     { id: 'login', name: 'Acceder', icon: Map, link: `/login/` },
   ];
 
