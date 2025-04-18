@@ -23,7 +23,7 @@ const AppRouter: FC = () => {
       <Route path="/dashboard/analytics"><LayoutDashboard><Analitic /></LayoutDashboard></Route>
       <Route path="/dashboard/menu"><LayoutDashboard><Menu /></LayoutDashboard></Route>
       <Route path="/dashboard/report"><LayoutDashboard><Report /></LayoutDashboard></Route>
-      <Route path="/dashboard/profile"><LayoutDashboard><Profile /></LayoutDashboard></Route>
+      <Route path="/dashboard/profile"><LayoutDashboard><Profile edit /></LayoutDashboard></Route>
       <Route path="/login"><Login /></Route>
 
       {/* Default route in a switch */}
