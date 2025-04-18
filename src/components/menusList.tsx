@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
-import { LayoutGrid, Plus, Table as TableIcon } from 'lucide-react';
-import { Link } from 'wouter';
+import { LayoutGrid, Table as TableIcon } from 'lucide-react';
 
 const menus = [
     {
@@ -50,10 +49,7 @@ const MenuList: FC<Props> = ({ title }) => {
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-4xl font-bold text-gray-600">{title ? title : `Menús`}</h2>
                     <div className="flex gap-2">
-                        <Link to="/create-restaurant" className="bg-green-600 hover:bg-green-700 duration-200 flex items-center justify-between rounded px-4 py-2 text-white font-bold">
-                            <Plus className="w-4 h-4 mr-2" />
-                            Nuevo Menú
-                        </Link>
+                        
                         <button
                             onClick={() => setViewMode('table')}
                             className={`p-2 rounded-lg flex items-center gap-2 ${viewMode === 'table'
